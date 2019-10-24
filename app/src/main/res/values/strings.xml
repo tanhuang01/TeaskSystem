@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TestSystem</string>
+
+    <string name="test_notification_permission_note">
+        测试系统的获取 notification 的权限。
+        4.1（16） - 4.4（19）默认拥有权限；
+        4.4w（20） - 7.1（25）可以通过 app_package 和 app_uid 实现
+        8.0 （26） 以上， 通过 EXTRA_APP_PACKAGE， EXTRA_CHANNEL_ID 两个关键字实现
+    </string>
+    <string name="notification_permission">测试系统的 notification 权限</string>
+</resources>
