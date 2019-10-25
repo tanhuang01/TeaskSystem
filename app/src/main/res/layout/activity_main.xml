@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!--    系统通知权限-->
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_test_notification"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:text="@string/notification_permission"
-        style="@style/main_entrance_bt_style" />
+        android:id="@+id/_01_bt_test_notification"
+        style="@style/main_entrance_bt_style"
+        android:text="@string/notification_permission" />
+
+    <!--    沉浸式通知栏-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/_02_bt_test_immersive_notification_bar"
+        style="@style/main_entrance_bt_style"
+        android:text="@string/immersive_notification_bar" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

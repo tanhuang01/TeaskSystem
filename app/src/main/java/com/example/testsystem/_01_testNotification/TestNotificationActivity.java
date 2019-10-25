@@ -1,21 +1,16 @@
-package com.example.testsystem;
+package com.example.testsystem._01_testNotification;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationManagerCompat;
+import androidx.fragment.app.FragmentManager;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.view.View;
 import android.widget.Button;
+
+import com.example.testsystem.R;
 
 import utils.NotificationPermissionUtil;
 
-import static android.app.Notification.EXTRA_CHANNEL_ID;
-import static android.provider.Settings.EXTRA_APP_PACKAGE;
-
-public class TestNotification extends AppCompatActivity {
+public class TestNotificationActivity extends AppCompatActivity {
 
     private Button bt_set_notification_permission;
 
@@ -25,12 +20,8 @@ public class TestNotification extends AppCompatActivity {
         setContentView(R.layout.activity_test_notification);
 
         bt_set_notification_permission = findViewById(R.id.bt_set_notification);
-        bt_set_notification_permission.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NotificationPermissionUtil.setSystemNotificationPermission(getApplicationContext());
-            }
-        });
+        bt_set_notification_permission.setOnClickListener(v ->
+                NotificationPermissionUtil.setSystemNotificationPermission(this));
     }
 
     @Override
@@ -41,7 +32,7 @@ public class TestNotification extends AppCompatActivity {
 
     private void checkNotifySetting() {
 
-        if (NotificationPermissionUtil.isOpen(getApplicationContext())) {
+        if (NotificationPermissionUtil.isOpened(getApplicationContext())) {
             bt_set_notification_permission.setText("通知权限已经被打开" +
                     "\n手机型号:" + android.os.Build.MODEL +
                     "\nSDK版本:" + android.os.Build.VERSION.SDK +
@@ -50,6 +41,12 @@ public class TestNotification extends AppCompatActivity {
 
         } else {
             bt_set_notification_permission.setText("还没有开启通知权限，点击去开启");
+
+
         }
+
+        // 展示 权限申请对话框.
+        NotificationPermissionUtil.tipIfHasNoPermission(this);
+
     }
 }

@@ -8,4 +8,6 @@
         8.0 （26） 以上， 通过 EXTRA_APP_PACKAGE， EXTRA_CHANNEL_ID 两个关键字实现
     </string>
     <string name="notification_permission">测试系统的 notification 权限</string>
+    <string name="immersive_notification_bar">沉浸式效果</string>
+
 </resources>

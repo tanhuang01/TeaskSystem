@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.testsystem._01_testNotification.PermissionDialogFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fr_notification_dialog_container"
+    android:layout_width="match_parent"
+    android:background="#bb656565"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="260dp"
+        android:layout_height="378dp"
+        android:layout_gravity="center">
+
+        <FrameLayout
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginBottom="37dp"
+            android:background="@drawable/bg_white_radius4" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/im_permission_note"
+            android:layout_width="0dp"
+            android:layout_height="155dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/permission_note"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_permission_tip"
+            android:layout_width="0dp"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="温馨提示"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/im_permission_note" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_permission_desc"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="为了让您更好的享受喵喵玩的优质服务\n请开启系统通知权限"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_permission_tip" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_set_notification"
+            android:layout_width="125dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/daoyuanjiao_huang"
+            android:text="去开启"
+            android:textColor="#333333"
+            app:layout_constraintBottom_toTopOf="@id/ch_no_long_prompt"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/ch_no_long_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:includeFontPadding="false"
+            android:text="不再提示"
+            android:textColor="#d9d9d9"
+            android:button="@drawable/checkbox_style"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/im_exit"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/im_exit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/permission_note_exit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.example.testsystem._01_testNotification.PermissionDialogFrameLayout>

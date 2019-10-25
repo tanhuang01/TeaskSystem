@@ -11,8 +11,15 @@
     <style name="main_entrance_bt_style">
         <!-- marginLeft and marginRight for api which is lower than 19       -->
         <item name="android:layout_margin">4dp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="DialogCheckStyle" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
     </style>
 
 </resources>
