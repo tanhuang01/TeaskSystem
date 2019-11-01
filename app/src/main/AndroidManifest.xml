@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.testsystem">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,6 +14,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ImmersiveNotificationBarActivity"></activity>
         <activity android:name="._01_testNotification.TestNotificationActivity" />
+        <activity android:name=".TestEmulateOrMobileActivity"></activity>
+        <activity android:name=".TestNotificationActvity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

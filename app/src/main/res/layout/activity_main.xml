@@ -18,5 +18,12 @@
         style="@style/main_entrance_bt_style"
         android:text="@string/immersive_notification_bar" />
 
+    <!--    测试是否为模拟器-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_test_emulate"
+        style="@style/main_entrance_bt_style"
+        android:text="@string/test_emulate"
+        android:textColor="@android:color/black" />
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

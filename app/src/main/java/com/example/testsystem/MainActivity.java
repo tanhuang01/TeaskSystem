@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button _01_bt_SystemNotification;
     private Button _02_bt_immersive_notification_bar;
+    private Button _03_bt_test_emulate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
         // 沉浸式效果
         _02_bt_immersive_notification_bar = findViewById(R.id._02_bt_test_immersive_notification_bar);
+        _02_bt_immersive_notification_bar.setOnClickListener(v ->
+                startActivity(new Intent(this, null)));
 
+        // 测试是否为模拟器
+        _03_bt_test_emulate = findViewById(R.id.bt_test_emulate);
+        _03_bt_test_emulate.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this,
+                        TestEmulateOrMobileActivity.class)));
     }
 }
